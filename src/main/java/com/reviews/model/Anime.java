@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 @Entity
 @Table(name = "anime")
@@ -17,11 +18,11 @@ public class Anime {
 
     @NotNull(message = "Name is mandatory") 
     @NotBlank(message = "Name is mandatory") 
-    private String title;
+    private String animeTitle;
     
     @NotNull(message = "Name is mandatory") 
     @NotBlank(message = "Name is mandatory") 
-    private String imgURL;
+    private String imageUrl;
 
     public long getId() {
         return id;
@@ -31,21 +32,23 @@ public class Anime {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getAnimeTitle() {
+        return animeTitle;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setAnimeTitle(String animeTitle) {
+        this.animeTitle = animeTitle;
     }
 
-    public String getImgURL() {
-        return imgURL;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setImgURL(String imgURL) {
-        this.imgURL = imgURL;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
+
+    
 }
     
    
