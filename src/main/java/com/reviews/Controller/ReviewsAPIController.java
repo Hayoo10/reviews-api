@@ -50,7 +50,7 @@ public class ReviewsAPIController {
     }
 
     // Add (Create)
-    @PostMapping("/animes")
+    @PostMapping("/anime")
     public ResponseEntity<?> store(@RequestBody Anime anime) {
 
         return new ResponseEntity<Anime>(bll.addAnime(anime), HttpStatus.OK);
